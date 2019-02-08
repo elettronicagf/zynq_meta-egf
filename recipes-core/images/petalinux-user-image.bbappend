@@ -61,3 +61,6 @@ IMAGE_INSTALL_append = " libogg"
 # Requires license whitelist due to non-open-source code (MP3 decode, etc)
 #IMAGE_INSTALL_append = " gstreamer1.0-plugins-ugly"
 #IMAGE_INSTALL_append = " mpg123"
+
+IMAGE_INSTALL_append = " version"
+
