@@ -1,3 +1,5 @@
+IMAGE_VERSION = "001"
+
 IMAGE_INSTALL_append = " peekpoke"
 IMAGE_INSTALL_append = " gpio-demo"
 IMAGE_INSTALL_append = " i2csensor"
@@ -64,3 +66,8 @@ IMAGE_INSTALL_append = " libogg"
 
 IMAGE_INSTALL_append = " version"
 
+write_version () {
+	echo ${IMAGE_VERSION} > ${IMAGE_ROOTFS}/etc/version-rootfs
+}
+
+IMAGE_PREPROCESS_COMMAND += "write_version;"
